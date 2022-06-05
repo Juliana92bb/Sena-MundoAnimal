@@ -71,27 +71,74 @@
               </a>
             </div>
             <!-- /Logo -->
-            <h4 class="mb-2">Adventure starts here 🚀</h4>
-            <p class="mb-4">Make your app management easy and fun!</p>
-
+            <h4 class="mb-2">Bienvenido a Mundo Animal 🚀</h4>
+            <p class="mb-4">Registrate Ya!</p>
             <form id="formAuthentication" class="mb-3" action="{{route('register')}}" method="POST">
+                @csrf
+                <div class="mb-3">
+                    <label for="documento" class="form-label">Documento</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="documento"
+                      name="documento"
+                      placeholder="Ingrese su Documento"
+                      autofocus
+                      required
+                      onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+                    />
+                  </div>
               <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
+                <label for="nombre" class="form-label">Nombres</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="username"
-                  name="username"
-                  placeholder="Enter your username"
-                  autofocus
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Ingrese su Nombre"
+                  required
                 />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
+                <label for="apellido" class="form-label">Apellidos</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellido"
+                  name="apellido"
+                  placeholder="Ingrese sus Apellidos"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Telefono</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="Ingrese su Telefono"
+                  required
+                  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="direccion" class="form-label">Direccion</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="direccion"
+                  name="direccion"
+                  placeholder="Ingrese su Direccion"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electronico</label>
+                <input type="text" class="form-control" id="email" name="username" placeholder="Ingresa tu Correo Electronico" required/>
               </div>
               <div class="mb-3 form-password-toggle">
-                <label class="form-label" for="password">Password</label>
+                <label class="form-label" for="password">Contraseña</label>
                 <div class="input-group input-group-merge">
                   <input
                     type="password"
@@ -100,27 +147,18 @@
                     name="password"
                     placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                     aria-describedby="password"
+                    required
                   />
                   <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                 </div>
               </div>
-
-              <div class="mb-3">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
-                  <label class="form-check-label" for="terms-conditions">
-                    I agree to
-                    <a href="javascript:void(0);">privacy policy & terms</a>
-                  </label>
-                </div>
-              </div>
-              <button class="btn btn-primary d-grid w-100">Sign up</button>
+              <button class="btn btn-primary d-grid w-100">Registrar</button>
             </form>
 
             <p class="text-center">
-              <span>Already have an account?</span>
-              <a href="auth-login-basic.html">
-                <span>Sign in instead</span>
+              <span>Ya tienes una cuenta?</span>
+              <a href="{{route('login')}}">
+                <span>Iniciar Sesion</span>
               </a>
             </p>
           </div>

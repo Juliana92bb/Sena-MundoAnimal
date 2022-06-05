@@ -21,10 +21,11 @@ class CreateProductosTable extends Migration
             $table->double('precio');
             $table->double('iva');
             $table->integer('existencias');
-            $table->unsignedBigInteger('categoria_id'); 
+            $table->unsignedBigInteger('categoria_id');
             $table->foreign('categoria_id')->references('id_categoria')->on('categoria');
-            $table->unsignedBigInteger('proveedor_id'); 
+            $table->unsignedBigInteger('proveedor_id');
             $table->foreign('proveedor_id')->references('id_proveedor')->on('proveedor');
+            $table->timestamps();
         });
     }
 

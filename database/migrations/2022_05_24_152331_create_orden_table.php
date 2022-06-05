@@ -17,7 +17,7 @@ class CreateOrdenTable extends Migration
             $table->id('id_orden');
             $table->bigInteger('total_price');
             $table->unsignedBigInteger('documento_id');
-            $table->timestamps();             
+            $table->timestamps();
             $table->foreign('documento_id')->references('documento')->on('usuarios');
         });
     }

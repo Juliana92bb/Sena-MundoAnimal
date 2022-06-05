@@ -20,6 +20,7 @@ class CreateOrdenArticulosTable extends Migration
             $table->integer('cantidad');
             $table->foreign('orden_id')->references('id_orden')->on('orden');
             $table->foreign('productos_id')->references('id_productos')->on('productos');
+            $table->timestamps();
         });
     }
 

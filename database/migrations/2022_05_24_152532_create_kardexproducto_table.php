@@ -22,6 +22,7 @@ class CreateKardexproductoTable extends Migration
             $table->double('costoSalida_k');
             $table->unsignedBigInteger('productos_id');
             $table->foreign('productos_id')->references('id_productos')->on('productos');
+            $table->timestamps();
         });
     }
 
