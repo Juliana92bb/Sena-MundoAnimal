@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,17 +18,15 @@ use Illuminate\Support\Facades\Route;
 // las rutas las lee laravel en fora de espagueti si una no cincide continua con la siguiente
 Route::get('/', HomeController::class);
 
+//Login
 Route::get('login', [LoginController::class, 'index'])->name("login");
-Route::get('register', [LoginController::class, 'create'])->name('create-user');
 Route::post('auth', [LoginController::class, 'auth'])->name("login-auth");
-Route::post('register', [LoginController::class, 'create'])->name("register");
-Route::get('users', [UserController::class, ' index'])->name("users");
 
-/*
-Route::get('cursos/{curso}/{categoria}', function ($curso,$categoria= null) {
-    return ("bienvenido al curso $curso, de la categoria $categoria");
+//User
+Route::prefix('users')->group(function () {
+    Route::get('list', [UserController::class, ' index'])->name("list-users");
+    Route::get('register', [UserController::class, 'create'])->name('create-user');
+    Route::put('update/{id}', [UserController::class, 'update'])->name("update-user");
+    Route::delete('delete/{id}', [UserController::class, 'delete'])->name('delete-user');
 });
-Route::get('/', function () {
-    //return view('welcome');
 
-});*/
