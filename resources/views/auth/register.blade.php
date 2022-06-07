@@ -73,7 +73,7 @@
             <!-- /Logo -->
             <h4 class="mb-2">Bienvenido a Mundo Animal 🚀</h4>
             <p class="mb-4">Registrate Ya!</p>
-            <form id="formAuthentication" class="mb-3" action="{{route('register')}}" method="POST">
+            <form id="formAuthentication" class="mb-3" action="{{route('create-user')}}" method="POST">
                 @csrf
                 <div class="mb-3">
                     <label for="documento" class="form-label">Documento</label>

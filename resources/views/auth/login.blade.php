@@ -121,7 +121,7 @@
 
           <p class="text-center">
             <span>No estas registrado?</span>
-            <a href="{{route('register-user')}}">
+            <a href="{{route('create-user')}}">
               <span>Crear una cuenta</span>
             </a>
           </p>

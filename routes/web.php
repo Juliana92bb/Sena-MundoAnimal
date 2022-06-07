@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // las rutas las lee laravel en fora de espagueti si una no cincide continua con la siguiente
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name("index");
 
 //Login
 Route::get('login', [LoginController::class, 'index'])->name("login");
