@@ -14,6 +14,7 @@ class LoginController extends Controller
     }
 
     public function auth(Request $request){
+        
 
         if (auth()->attempt(['username' => $request->username, 'password' => $request->password])) {
             echo "Oda";

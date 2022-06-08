@@ -82,7 +82,7 @@
                 type="email"
                 class="form-control"
                 id="email"
-                name="email"
+                name="username"
                 placeholder="Ingresa tu Correo Electronico"
                 autofocus
                 required
