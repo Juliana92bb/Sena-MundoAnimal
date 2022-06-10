@@ -23,12 +23,18 @@
      <!-- Core CSS -->
      <link rel="stylesheet" href="{{asset('vendor/css/core.css')}}" class="template-customizer-core-css" />
      <link rel="stylesheet" href="{{asset('vendor/css/theme-default.css')}}" class="template-customizer-theme-css" />
-     <link rel="stylesheet" href="{{asset('assets/css/demo.css')}}" />
+     <link rel="stylesheet" href="{{asset('css/demo.css')}}" />
 
      <!-- Vendors CSS -->
      <link rel="stylesheet" href="{{asset('vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
 
      <link rel="stylesheet" href="{{asset('vendor/libs/apex-charts/apex-charts.css')}}" />
+
+     <link rel="stylesheet" href="vendor/libs/datatable/datatables.bootstrap5.css">
+     <link rel="stylesheet" href="vendor/libs/datatable/responsive.bootstrap5.css">
+     <link rel="stylesheet" href="vendor/libs/datatable/datatables.checkboxes.css">
+     <link rel="stylesheet" href="vendor/libs/datatable/buttons.bootstrap5.css">
+     <link rel="stylesheet" href="vendor/libs/datatable/rowgroup.bootstrap5.css">
 
      <!-- Page CSS -->
 
@@ -38,6 +44,7 @@
      <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
      <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
      <script src="{{asset('js/config.js')}}"></script>
+
 
     @stack('head')
 </head>
@@ -71,13 +78,16 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="{{asset('vendor/libs/apex-charts/apexcharts.js9')}}"></script>
+    <script src="{{asset('vendor/libs/apex-charts/apexcharts.js')}}"></script>
 
     <!-- Main JS -->
     <script src="{{asset('js/main.js')}}"></script>
 
     <!-- Page JS -->
     <script src="{{asset('js/dashboards-analytics.js')}}"></script>
+
+    <!-- Datatable -->
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

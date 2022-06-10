@@ -14,12 +14,21 @@ class LoginController extends Controller
     }
 
     public function auth(Request $request){
-        
-
-        if (auth()->attempt(['username' => $request->username, 'password' => $request->password])) {
-            echo "Oda";
+        $credenciales = $request->only('username', 'password');
+        if ((Auth::attempt($credenciales))){
+            $request->session()->regenerate();
+            return redirect()->route('dashboard');
         }else {
-            echo "adio";
+            return redirect()->route('login');
+
         }
+    }
+    public function logout(){
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
     }
 }

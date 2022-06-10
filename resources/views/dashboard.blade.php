@@ -4,4 +4,6 @@
 
 @section('content')
 
+{{Auth::user()->nombre}}
+
 @endsection

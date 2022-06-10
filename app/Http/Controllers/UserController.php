@@ -10,8 +10,9 @@ class UserController extends Controller
     public function index(){
         $user = User::all();
 
-        return view('users', compact($user));
+        return view('user.users', compact('user'));
     }
+
     public function create(Request $request){
 
         if ($request->isMethod('post')){

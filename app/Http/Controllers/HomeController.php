@@ -9,4 +9,7 @@ class HomeController extends Controller
     public function __invoke(){
         return view('auth.login');
     }
+    public function dashboard(){
+        return view('dashboard');
+    }
 }

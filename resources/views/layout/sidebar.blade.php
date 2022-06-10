@@ -33,7 +33,7 @@
             </a>
         </li>
         <li class="menu-item">
-            <a href="cards-basic.html" class="menu-link">
+            <a href="{{route('list-users')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div data-i18n="Basic">Usuarios</div>
             </a>
