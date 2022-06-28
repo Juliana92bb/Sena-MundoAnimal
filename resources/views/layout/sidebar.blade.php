@@ -2,19 +2,14 @@
     <div class="app-brand demo">
         <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-                <img src="{{asset('img/icons/MundoAnimal.png')}}" alt="Logo" width="190">
+                <img src="{{asset('img/icons/MundoAnimal.png')}}" alt="Logo" width="150">
             </span>
-
-        </a>
-
-        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-            <i class="bx bx-chevron-left bx-sm align-middle"></i>
         </a>
     </div>
 
     <div class="menu-inner-shadow"></div>
 
-    <ul class="menu-inner py-1">
+    <ul class="menu-inner py-1 mt-3">
         <!-- Dashboard -->
         <li class="menu-item active">
             <a href="index.html" class="menu-link">

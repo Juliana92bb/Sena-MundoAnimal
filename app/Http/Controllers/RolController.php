@@ -18,16 +18,18 @@ class RolController extends Controller
             $rol = new Rol();
             $rol -> id_roles = $request -> id_roles;
             $rol -> descripcion = $request -> descripcion;
-        
+
             $rol -> save();
 
-    }    
+    }
 }
     public function update(Request $request, $id){
 
         $rol = Rol::find($id);
         $rol -> id_roles = $request -> id_roles;
         $rol -> descripcion = $request -> descripcion;
+        
+        $rol -> save();
 
     }
     public function delete($id){

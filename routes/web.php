@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -15,13 +16,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// las rutas las lee laravel en fora de espagueti si una no cincide continua con la siguiente
+// las rutas las lee laravel en forma de espagueti si una no cincide continua con la siguiente
 Route::get('/', HomeController::class)->name("index");
 
 //Login
 Route::get('login', [LoginController::class, 'index'])->name("login")->middleware('guest');
 Route::post('auth', [LoginController::class, 'auth'])->name("login-auth");
-Route::get('logout', [LoginController::class, '']);
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('index', [RegisterController::class, 'index'])->name('forge-password');
+Route::post('send', [RegisterController::class, 'email'])->name('send-email');
+Route::get('temp', [RegisterController::class, 'urltemp'])->name('url-temp');
+Route::get('forge-password', [RegisterController::class, 'forge'])->name('forge');
+Route::post('form', [RegisterController::class, 'form'])->name('form');
 
 //dashboard
 Route::get('dashboard', [HomeController::class, 'dashboard'])->name("dashboard")->middleware('auth');
